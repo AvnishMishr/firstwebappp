@@ -1,2 +1,215 @@
-<h1> My First APP </h1>
-avnish
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>List Tags</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div class="head">
+		My Prority Calculator Page
+		<i class="fas fa-sync"></i>
+	</div>
+	<div id="front">
+		List your projects
+		<br><br>
+
+		<label for="project1">project1 name:</label>
+		
+		<input type="text" id="project1"><br><br>
+		<label id="score1">project1 name:</label>
+
+		<label for="project2">project2 name:</label>
+		<input type="text" id="project2"><br><br>
+		<label id="score2">project2 name:</label>
+
+		<label for="project3">project3 name:</label>
+		<input type="text" id="project3"><br><br>
+		<label id="score3">project3 name:</label>
+
+		<button id="submit" onClick="mySubmit()"> Submit</button>
+	</div>
+	<br>
+	<div id="header">
+		<label>Give score based on the time to get started :</label>
+		<br>
+		<select  id="Q1P1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q1P2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q1P3">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<label for="fname">Give score based on the time that this project will need continuusly :</label>
+		<br>
+		<select  id="Q2P1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q2P2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q2P3">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<br>
+		<label for="fname">Give score based on the efforts needed :</label>
+		<br>
+		<select  id="Q3P1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q3P2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q3P3">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<br>
+		<label for="fname">Give score based on the impact on your life in 3 months :</label>
+		<br>
+		<select  id="Q4P1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q4P2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q4P3">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<br>
+		<label for="fname">Give score based on the impact on your life in 5 years :</label>
+		<br>
+		<select  id="Q5P1">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br><br>
+		<select  id="Q5P2">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<select  id="Q5P3">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+		<br>
+		<br><br>
+		
+		<button onclick="CalcScore()">Calculate Score</button>
+
+		<br><br><br>
+		<hr>
+
+		<h1>problem details</h1>
+
+
+
+
+		Heading:
+		List your projects
+
+		project1:
+		project2:
+		project3:
+
+
+		Give score based on the time to get started (least time : 1, Most Time: 5)
+		project1: 3
+		project2:
+		project3:
+
+
+		Give score based on the time that this project will need continuusly (least time : 1, Most Time: 5)
+		project1: 2
+		project2:
+		project3:
+
+		Give score based on the efforts needed (least time : 1, Most Time: 5)
+		project1: 5
+		project2:
+		project3:
+
+		Give score based on the impact on your life in 3 months (least : 1, Most : 5)
+		project1: 5
+		project2:
+		project3:
+
+		Give score based on the impact on your life in 5 years (least : 1, Most : 5)
+		project1: 4
+		project2:
+		project3:
+
+		Final Score
+		project 1 final score: 3*3 + 2 *2 + 5*5 + 5*5 + 4*4
+	</div>
+	<script src="myscript.js"></script>
+
+</body>
+
+</html>
